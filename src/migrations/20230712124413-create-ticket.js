@@ -26,7 +26,8 @@ module.exports = {
         type: Sequelize.ENUM,
         values : ["PENDING", "SUCCESS", "FAILED"]
         ,
-        allowNull : false
+        allowNull : false,
+        defaultValue: "PENDING",
       },
       createdAt: {
         allowNull: false,

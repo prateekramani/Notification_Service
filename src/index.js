@@ -19,17 +19,5 @@ app.use('/api', apiRoutes);
 app.listen(ServerConfig.PORT, async () => {
     Logger.info("Successfully started the server on PORT", {});
     // info is the level , Success....is the message 
-    try {
-        const response = await mailsender.sendMail({
-            from: ServerConfig.GMAIL_EMAIL,
-            to : "ramaniprateek@gmail.com",
-            subject: "Is the service working",
-            text: "Its working"
-        })
-    
-        console.log(`Successfully started the server on PORT : ${ServerConfig.PORT}`)
-    }
-    catch (e) {
-        console.log(e)
-    }
+    console.log(`Successfully started the server on PORT : ${ServerConfig.PORT}`)
 })
