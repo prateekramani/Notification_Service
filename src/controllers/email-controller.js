@@ -13,7 +13,7 @@ async function create(req, res, next) {
         return res.status(StatusCodes.CREATED).json(response);
 
     } catch (error) {
-        return res.status(StatusCodes.INSUFFICIENT_SPACE_ON_RESOURCE);
+        return res.status(StatusCodes.INTERNAL_SERVER_ERROR);
     }
 }
 
